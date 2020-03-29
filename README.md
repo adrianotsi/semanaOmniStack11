@@ -25,3 +25,12 @@ Repositório criado para armazenar o projeto desenvolvido durante a Semana OmniS
 - npx knex = Lista todos os comandos;  
 - knex migrate:rollback = Defaz último comando latest;
 - Knex migrate:status = Lista migations já executadas.
+
+### Conceitos do React:
+- Componentes no react são funcões que retornam html;
+- Quando o html está dentro do JS, ele é chamado de JSX (JavaScript XML);
+- Estado: informação que será mantida pelo componente;
+- Imutabilidade: Não se pode manipular uma variável de forma direta, é preciso sobrepopor a variável.
+
+[Pacote de icones útilizado](https://feathericons.com/)
+
