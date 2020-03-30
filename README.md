@@ -34,3 +34,40 @@ Repositório criado para armazenar o projeto desenvolvido durante a Semana OmniS
 
 [Pacote de icones útilizado](https://feathericons.com/)
 
+### React Native: Diferença de elementos e outros conceitos:
+- View: Equivalente a Div, header, footer, aside. Utilizado em containers ou section;
+- Text: Qualquer tipo de texto seja paragrafo ou título;
+- Não possui semântica;
+- Propriedades: São atributos repassados de um componente pai para o filho;
+- Herança: Não existe herança de estilos no react-native, portanto cada elemento possui sua própria estilização;
+
+[Pacote de envio de e-mail utilizado](https://docs.expo.io/versions/latest/sdk/mail-composer/)
+
+## Erros que tive no desenvolvimento:
+
+- Erro ao iniciaizar Expo
+```
+npm WARN deprecated core-js@1.2.7: core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3. 
+```
+- Solução:
+[Instalar o instalar o Yarn seguindo as intruções do site](https://classic.yarnpkg.com/pt-BR/docs/install/#debian-stable)
+e executar o comando:
+```
+expo init mobile --yarn
+```
+
+- Mensagem de Erro:
+```
+internal/fs/watchers.js:177
+    throw error;
+    ^
+Error: ENOSPC: System limit for number of file watchers reached, watch
+```
+- Solução: Executar no terminal os comandos
+```
+echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
+
+cat /proc/sys/fs/inotify/max_user_watches
+
+fs.inotify.max_user_watches=524288
+```
